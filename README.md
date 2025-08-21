@@ -21,7 +21,7 @@ https://reqres.in/api-docs/#/
 1. Postman: If you haven't already, [download and install Postman.](https://www.postman.com/downloads/)
 2. Clone the repository:
 ```
-https://github.com/shobuj-das/Testing-World-API-testing-with-Postman.git
+https://github.com/shobuj-das/ReqRes-API-Testing.git
 ```
 
 3. Import the Postman collection:
@@ -42,8 +42,6 @@ https://github.com/shobuj-das/Testing-World-API-testing-with-Postman.git
    ```
     npm install -g newman-reporter-htmlextra
    ```
-
-   
 ## Uses
 
 1. Select Environment:
@@ -57,6 +55,26 @@ https://github.com/shobuj-das/Testing-World-API-testing-with-Postman.git
    - Once the tests are complete, view the results in the Runner tab.
    - Detailed test results can be viewed for each request.
 
+## API End-points
+### User
+- GET /api/users?page={{page}} — List users
+- GET /api/users/2 — Single user (found)
+- GET /api/users/23 — Single user (not found → 404)
+- POST /api/users — Create user
+
+### Resources (Colours)
+- GET /api/unknown — List resources
+- GET /api/unknown/2 — Single resource (found)
+- GET /api/unknown/23 — Single resource (not found → 404)
+
+### Auth (Simulated)
+- POST /api/register — Register (success)
+- POST /api/register — Register (missing password → 400)
+- POST /api/login — Login (success)
+- POST /api/login — Login (missing password → 400)
+
+### Misc
+- GET /api/users?delay={{delay}} — Delayed response (simulate loading)
 
 ### Newman HTML Report:
 <img width="736" height="857" alt="image" src="https://github.com/user-attachments/assets/b3481071-bf28-40fd-8fd6-5f30284b735c" />
